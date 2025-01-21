@@ -161,3 +161,95 @@ document.getElementById("movimiento").addEventListener("click", function () {
 })
 
 
+
+document.getElementById("pes").addEventListener("click", function () {
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', function () {
+        if (this.readyState === this.DONE) {
+            const response = JSON.parse(this.responseText);
+            
+             document.getElementById("resultat").innerHTML = ""
+
+             let pes = document.getElementById("pesito").value;
+             console.log(pes)
+
+            for (let i = 0; i < response.results.length; i++) {
+
+                const xhr1 = new XMLHttpRequest();
+
+                xhr1.addEventListener('readystatechange', function () {
+                    if (this.readyState === this.DONE) {
+                        const response = JSON.parse(this.responseText);
+                        
+                        for(let a = 0; a<response.types.length; a++ ){
+                            
+                            if(response.weight == pes){
+                            
+                                console.log(response)
+                                pintarPokemon(response);
+                            }
+
+                        }
+
+                    
+                    }
+                });
+
+                xhr1.open('GET', response.results[i].url);
+                xhr1.send();
+
+            }
+        }
+    });
+
+    xhr.open('GET', `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`);
+    xhr.send();
+})
+
+
+
+document.getElementById("let").addEventListener("click", function () {
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', function () {
+        if (this.readyState === this.DONE) {
+            const response = JSON.parse(this.responseText);
+            
+             document.getElementById("resultat").innerHTML = ""
+
+             let letra = document.getElementById("letra").value;
+             console.log(letra)
+
+            for (let i = 0; i < response.results.length; i++) {
+
+                const xhr1 = new XMLHttpRequest();
+
+                xhr1.addEventListener('readystatechange', function () {
+                    if (this.readyState === this.DONE) {
+                        const response = JSON.parse(this.responseText);
+                        
+                        for(let a = 0; a<response.types.length; a++ ){
+                            
+                            if(response.name.charAt(0) == letra){
+                            
+                                console.log(response)
+                                pintarPokemon(response);
+                            }
+
+                        }
+
+                    
+                    }
+                });
+
+                xhr1.open('GET', response.results[i].url);
+                xhr1.send();
+
+            }
+        }
+    });
+
+    xhr.open('GET', `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`);
+    xhr.send();
+})

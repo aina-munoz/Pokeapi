@@ -15,15 +15,21 @@ html, body{
     text-align: center;
 }
 
+.hola{
+    margin-left: 1.4rem;
+}
+
 input{
     cursor: pointer;
     padding: .4rem;
     border-radius: .5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    font-size: 16px;
+    font-weight: 530;
     background-color: rgba(245, 245, 245, 0.952);
-    color: darkblue;
 }
+
 
 button{
     cursor: pointer;
@@ -33,32 +39,28 @@ button{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 530;
-    color: darkblue;
     background-color: rgba(255, 217, 0, 0.863);
     border-color: rgba(255, 217, 0, 0.863);
 }
 
 select{
     cursor: pointer;
-    padding: .5rem;
+    padding: .4rem;
     border-radius: .5rem;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 530;
-    color: darkblue;
-    background-color: rgba(255, 217, 0, 0.863);
-    border-color: rgba(255, 217, 0, 0.863);
-    margin-left: 2rem;
+    background-color: rgba(245, 245, 245, 0.952);
+    margin-left: 1.4rem;
 }
 
-.hola{
-    margin-left: 2rem;
-}
 
 h1{
     color: darkblue;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin: auto;
 }
 
 img{
@@ -66,7 +68,8 @@ img{
 }
 
 .resultat{
-    margin-top:7px;
+    margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
 }
