@@ -1,0 +1,75 @@
+.foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 15%;
+}
+
+html, body{
+    justify-content: center;
+    margin: 0 auto;
+    background-color: beige;
+    text-align: center;
+}
+
+.hola{
+    margin-left: 1.4rem;
+}
+
+input{
+    cursor: pointer;
+    padding: .4rem;
+    border-radius: .5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 530;
+    background-color: rgba(245, 245, 245, 0.952);
+}
+
+
+button{
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 530;
+    background-color: rgba(255, 217, 0, 0.863);
+    border-color: rgba(255, 217, 0, 0.863);
+}
+
+select{
+    cursor: pointer;
+    padding: .4rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 530;
+    background-color: rgba(245, 245, 245, 0.952);
+    margin-left: 1.4rem;
+}
+
+
+h1{
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin: auto;
+}
+
+img{
+    width: 30%;
+}
+
+.resultat{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
